@@ -1,16 +1,16 @@
-## Project: Tumor Cancer Prediction.
+# Project: Tumor Cancer Prediction.
 
 The objective of the projects is to prepare you to apply different machine learning algorithms to real-world tasks. This will help you to increase your knowledge about the workflow of the machine learning tasks. You will learn how to clean your data, applying pre-processing, feature engineering, classification methods.
 
-# **- preprocessing techniques.**
+## preprocessing techniques.
 
-- Check for missing value. 
+- ** Check for missing value. **
 
 
 <img src="images/11.PNG"/>
 <img src="images/null.PNG"/>
 
-- map the class label
+- ** map the class label**
 
 Transform the class labels from their original string representation (M and B) into integers
 
@@ -18,240 +18,215 @@ Transform the class labels from their original string representation (M and B) i
 <img src="images/map.PNG"/>
 </p>
 
-- Feature Standardization.
+## Feature Standardization.
 
 Use sklearn to scale and transform the data
 
-![](RackMultipart20210327-4-12nzwsu_html_355d85e8ce8e528a.png)
+<img src="images/scaler.PNG"/>
 
-# **-Data analysis.**
+## Data analysis.
 
 - **DataFrame .describe()**
 
 Calculating some statistical data like  **percentile, mean**  and  **std**  of the numerical values of the Series or DataFrame.
+<img src="images/describe.PNG"/>
 
-![](RackMultipart20210327-4-12nzwsu_html_6828bcae8f66e2d0.png)
+## Correlation Matrix .
 
--
-# Correlation Matrix .
-
-![](RackMultipart20210327-4-12nzwsu_html_aa11bffd4434992c.png)
+<img src="images/corr.PNG"/>
 
 ### Observation:
 
 - The f2 and f4 feature have a strong positive correlation with f6,f8 and f9 feature;
 - The f21 and f22 feature have a weak correlation with f24,f8 and f19 feature;
 
-- countplot
+## countplot
 
 ### Observation:
 
 Number of benign tumor data more than number of malignant tumor data
 
-![](RackMultipart20210327-4-12nzwsu_html_4f0d19e38e221f72.png)
+<img src="images/count.PNG"/>
 
-- boxplot
+## boxplot
 
 ### Observation:
 
-mostof the values are usually higher in malignant than that of benign ![](RackMultipart20210327-4-12nzwsu_html_7354848c7cc1ef61.png) ![](RackMultipart20210327-4-12nzwsu_html_8ab7aa6deab93ac0.png) ![](RackMultipart20210327-4-12nzwsu_html_61a9cc04c270160a.png) ![](RackMultipart20210327-4-12nzwsu_html_f4f7262f61c2135.png)
+most of the values are usually higher in malignant than that of benign 
+<p>
+<img src="images/1.PNG"/>
+<img src="images/2.PNG"/>
+</p>
+<p>
+<img src="images/3.PNG"/>
+<img src="images/4.PNG"/>
+</p>
 
-# **-**
 
-#
-
-# **Sizes of training and validation sets.**
+## Sizes of training and validation sets.
 
 80% of the data for training and the remaining 20% for validation.
 
-![](RackMultipart20210327-4-12nzwsu_html_ad1bf1206edcc79b.png)
+<img src="images/split.PNG"/>
 
-# **- Hyperparameter tuning.**
+## Hyperparameter tuning.
 
 - **SVM**
 
-Hyperparameter:
+### Hyperparameter:
 
-- Kernel:
+* Kernel:
 
-- sigmoid
+   - sigmoid
+         accuracy score =0.945054945054945.
 
-accuracy score =0.945054945054945.
+   - linear
 
-- linear
+        accuracy score =0.978021978021978.
 
-accuracy score =0.978021978021978.
+   - rbf
+        accuracy score =0.978021978021978.
 
-- rbf
+* gamma:
 
-accuracy score =0.978021978021978.
+    - 0.001
+        accuracy score =0.9560439560439561.
 
-- gamma:
+    - 0.0001
 
-- 0.001
+        accuracy score =0.7362637362637363.
 
-accuracy score =0.9560439560439561.
+    - 0.01
 
-- 0.0001
+        Accuracy score =0.978021978021978.
 
-accuracy score =0.7362637362637363.
+- **Decision Tree**
 
-- 0.01
+### Hyperparameter:
 
-Accuracy score =0.978021978021978.
+* max\_depth:
 
-- **Decision Tree.**
+    - (None)
 
-Hyperparameter:
+        Accuracy score =0.9340659340659341.
 
-- max\_depth:
+    - (2)
 
-- (None)
+        Accuracy score =0.9560439560439561.
 
-Accuracy score =0.9340659340659341.
+    - (4)
 
-- (2**)**
+       Accuracy score =0.945054945054945
 
-Accuracy score =0.9560439560439561.
+* min\_samples\_leaf:
 
-- (4**)**
+    - (10)
 
-Accuracy score =0.945054945054945
+       Accuracy score =0.9560439560439561.
 
-- min\_samples\_leaf:
+    - (6)
 
-- (10)
+       Accuracy score =0.967032967032967
 
-accuracy score =0.9560439560439561.
+    - (4)
 
-- (6**)**
+       Accuracy score =0.9340659340659341
 
-Accuracy score =0.967032967032967
+- **xgboost**
 
-- (4**)**
+### Hyperparameter:
 
-Accuracy score =0.9340659340659341
+* max\_depth:
 
-- **xgboost.**
+    - (3)
 
-Hyperparameter:
+         Accuracy score =0.978021978021978
 
-- max\_depth:
+    - (2)
 
-- (3)
+         Accuracy score =0.967032967032967
 
-accuracy score =0.978021978021978
+    - (4)
 
-- (2**)**
-
-Accuracy score =0.967032967032967
-
-- (4**)**
-
-Accuracy score =0.967032967032967
+         Accuracy score =0.967032967032967
 
 - learning\_rate:
 
-- (0.05)
+     - (0.05)
 
-Accuracy score =0.978021978021978.
+         Accuracy score =0.978021978021978.
 
-- (0.5**)**
+    - (0.5)
 
-Accuracy score =0.967032967032967
+         Accuracy score =0.967032967032967
 
-- (0.10**)**
+    - (0.10)
 
-Accuracy score =0.978021978021978
+         Accuracy score =0.978021978021978
 
-# **- Dimensionality Reduction.**
+## Dimensionality Reduction.
 
 - **PCA**
 
-- SVM:
+ * SVM:
 
-- (0.90)
+    - (0.90)
 
-Accuracy score =0.978021978021978.
+         Accuracy score =0.978021978021978.
 
-- (0.50**)**
+    - (0.50)
 
-Accuracy score =0.9340659340659341
+         Accuracy score =0.9340659340659341
 
-- (25**)**
-
-Accuracy score =0.978021978021978
-
-.
-
-- Decision Tree:
-
-- (0.90)
-
-Accuracy score =0.9340659340659341
-
-- (25**)**
-
-Accuracy score =0.9340659340659341
-
-- (0.70**)**
-
-Accuracy score =0.9230769230769231
+    - (25)
+          Accuracy score =0.978021978021978
 
 .
 
-- xgboost:
+  * Decision Tree:
 
-- (0.90)
+   - (0.90)
 
-Accuracy score =0.945054945054945
+       Accuracy score =0.9340659340659341
 
-- (0.50**)**
+    - (25)
 
-Accuracy score =0.9340659340659341
+       Accuracy score =0.9340659340659341
 
-- (24**)**
+    - (0.70)
 
-Accuracy score =0.9560439560439561
+       Accuracy score =0.9230769230769231.
+* xgboost:
 
-.
+   - (0.90)
 
-.
+       Accuracy score =0.945054945054945
 
-# **- Training Time graph.**
+    - (0.50)
 
-![](RackMultipart20210327-4-12nzwsu_html_4a3086e2c68a30a5.png)
+       Accuracy score =0.9340659340659341
 
-# **- Testing Time graph.**
+    - (24)
 
-![](RackMultipart20210327-4-12nzwsu_html_65a98d0d65b53a18.png)
+       Accuracy score =0.9560439560439561
 
-# **- Testing Time graph with using PCA.**
 
-![](RackMultipart20210327-4-12nzwsu_html_4c8563d6d13da1fb.png)
+### Training Time graph.
 
-# **- Training Time graph with using PCA.**
+<img src="images/tratime.PNG"/>
 
-![](RackMultipart20210327-4-12nzwsu_html_b01d9605402332ae.png)
+###  Testing Time graph.
 
-# **- Accuracy graph**
+<img src="images/test.PNG"/>
 
-![](RackMultipart20210327-4-12nzwsu_html_4360809b8b0d1c45.png)
-
-# **- Accuracy graph with using PCA**
-
-![](RackMultipart20210327-4-12nzwsu_html_91c9e0dd49a639f7.png)
-
-##
-# **Summary**
+## Summary
 
 _We applied_ _Decision Tree,__XGBoosts_ _and Support Vector Machine (SVM)_
 
 _algorithms __to__ the Tumor Cancer dataset._
 
 • _To predict whether the Tumor cancer is malignant or benign._
-_• Compared the performance results of all the algorithms based on_
+• Compared the performance results of all the algorithms based on_
 
 _the accuracy values. __and showed that_ _XGBoosts__ classifier is the best_
-
 _among all in determining benign and malignant tumors._
