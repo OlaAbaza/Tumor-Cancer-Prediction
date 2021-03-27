@@ -4,13 +4,13 @@ The objective of the projects is to prepare you to apply different machine learn
 
 ## preprocessing techniques.
 
-- ** Check for missing value. **
+- **Check for missing value. **
 
 
 <img src="images/11.PNG"/>
 <img src="images/null.PNG"/>
 
-- ** map the class label**
+- **map the class label**
 
 Transform the class labels from their original string representation (M and B) into integers
 
@@ -29,6 +29,7 @@ Use sklearn to scale and transform the data
 - **DataFrame .describe()**
 
 Calculating some statistical data like  **percentile, mean**  and  **std**  of the numerical values of the Series or DataFrame.
+
 <img src="images/describe.PNG"/>
 
 ## Correlation Matrix .
@@ -71,13 +72,14 @@ most of the values are usually higher in malignant than that of benign
 
 ## Hyperparameter tuning.
 
-- **SVM**
+## **SVM**
 
 ### Hyperparameter:
 
 * Kernel:
 
    - sigmoid
+   
          accuracy score =0.945054945054945.
 
    - linear
@@ -85,11 +87,13 @@ most of the values are usually higher in malignant than that of benign
         accuracy score =0.978021978021978.
 
    - rbf
+   
         accuracy score =0.978021978021978.
 
 * gamma:
 
     - 0.001
+	
         accuracy score =0.9560439560439561.
 
     - 0.0001
@@ -98,9 +102,9 @@ most of the values are usually higher in malignant than that of benign
 
     - 0.01
 
-        Accuracy score =0.978021978021978.
+        accuracy score =0.978021978021978.
 
-- **Decision Tree**
+## **Decision Tree**
 
 ### Hyperparameter:
 
@@ -175,17 +179,17 @@ most of the values are usually higher in malignant than that of benign
          Accuracy score =0.978021978021978.
 
     - (0.50)
-
+    
          Accuracy score =0.9340659340659341
 
     - (25)
-          Accuracy score =0.978021978021978
+    
+         Accuracy score =0.978021978021978
 
-.
 
   * Decision Tree:
 
-   - (0.90)
+    - (0.90)
 
        Accuracy score =0.9340659340659341
 
@@ -196,6 +200,7 @@ most of the values are usually higher in malignant than that of benign
     - (0.70)
 
        Accuracy score =0.9230769230769231.
+	   
 * xgboost:
 
    - (0.90)
